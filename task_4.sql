@@ -1,21 +1,17 @@
--- Prints the full description of the table 'books' from the database 'alx_book_store'.
--- This script queries the information_schema.COLUMNS table, as DESCRIBE/EXPLAIN are forbidden.
--- All SQL keywords are in uppercase.
+-- task_4.sql
+-- This script prints the full description of the table 'Books'
+-- from the database 'alx_book_store'
+-- It does not use DESCRIBE or EXPLAIN
 
-SELECT
-    COLUMN_NAME,
-    COLUMN_TYPE,
-    IS_NULLABLE,
-    COLUMN_KEY,
-    COLUMN_DEFAULT,
+SELECT 
+    COLUMN_NAME, 
+    COLUMN_TYPE, 
+    IS_NULLABLE, 
+    COLUMN_KEY, 
+    COLUMN_DEFAULT, 
     EXTRA
-FROM
-    information_schema.COLUMNS
-WHERE
-    TABLE_SCHEMA = 'alx_book_store'
-AND
-    TABLE_NAME = 'books'
-ORDER BY
-    ORDINAL_POSITION;
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA = 'alx_book_store'
+  AND TABLE_NAME = 'Books';
 
 
