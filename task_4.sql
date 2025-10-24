@@ -1,3 +1,7 @@
-SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'books';
+-- task_4.sql
+-- Objective: Print the full description of the table 'books' without using DESCRIBE or EXPLAIN
+
+USE alx_book_store;
+
+SHOW CREATE TABLE books;
+
